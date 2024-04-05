@@ -1,5 +1,5 @@
 {% set name = "psycopg2-yugabytedb" %}
-{% set version = "2.9.3.post0" %}
+{% set version = "2.9.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/psycopg2-yugabytedb-{{ version }}.tar.gz
-  sha256: e77d230f8e754c8d0940834314d49af80ae6a801560deb52eae5f3fa4155c7ba
+  sha256: 86fa49c0f74f1883174d18735b0bf6456968c836ccb4ac34d93f061e7fd4da7d
 
 build:
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -40,7 +40,7 @@ test:
 
 about:
   home: https://github.com/yugabyte/psycopg2
-  summary: Yugabyte Psycopg2 driver is a distributed python driver for YugabyteDB built on the PostgreSQL psycopg2 driver. 
+  summary: Yugabyte Psycopg2 driver is a distributed python driver for YugabyteDB built on the PostgreSQL psycopg2 driver.
   license: MPL-2.0-no-copyleft-exception
   license_file: LICENSE
 
