@@ -12,17 +12,19 @@ source:
 build:
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
     - libpq
+    - setuptools
   run:
     - python
   run_constrained:
