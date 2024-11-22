@@ -1,5 +1,5 @@
 {% set name = "psycopg2-yugabytedb" %}
-{% set version = "2.9.3.3" %}
+{% set version = "2.9.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 29fb6e495483ba715bd7547d9003ea98aac9ac87d2e66155321bd438aea37cd8
+  sha256: acfe2c72f9da84b322d72e28c0f1bd27df239932eff58669f06b9048748c4e23
 
 build:
   skip: true  # [py2k]
